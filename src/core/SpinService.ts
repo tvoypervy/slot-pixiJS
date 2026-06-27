@@ -1,4 +1,6 @@
-// JSON Type 
+import { SPINS_DATA } from "../config/spinsData";
+
+// JSON Type
 export interface WinLine {
   payline: number;
   symbol: string;
@@ -30,11 +32,10 @@ export class SpinService {
 
   public async loadData(): Promise<void> {
     try {
-      const response = await fetch("/spins.json");
-      this.gameData = await response.json();
-      console.log("Дані гри завантажено:", this.gameData);
+      this.gameData = SPINS_DATA;
+      console.log("Дані гри успішно завантажено з конфігу:", this.gameData);
     } catch (error) {
-      console.error("Помилка завантаження spins.json:", error);
+      console.error("Помилка ініціалізації даних гри:", error);
     }
   }
 

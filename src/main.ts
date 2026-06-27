@@ -1,5 +1,5 @@
 import { Application } from "pixi.js";
-import { GAME_CONFIG } from "./config/gameConfig";
+import { GAME_CONFIG } from "./config/gameConfig.ts";
 import { GameModel } from "./core/Model";
 import { GameView } from "./core/View";
 import { GameController } from "./core/Controller";

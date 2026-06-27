@@ -14,6 +14,6 @@ export const GAME_CONFIG = {
         x: 100,
         y: 100,
     },
-    // Placeholder for symb (1 to 5)
+    // Placeholder for symb (1 to)
     symbolsCount: 5 
 };

@@ -1,5 +1,5 @@
 import { Container, Graphics, Text } from "pixi.js";
-import { GAME_CONFIG } from "../config/gameConfig";
+import { GAME_CONFIG } from "../config/gameConfig.ts";
 
 export class Reel extends Container {
   private symbolTexts: Text[] = [];
@@ -20,13 +20,7 @@ export class Reel extends Container {
 
       // Тло символу
       const bg = new Graphics();
-      bg.roundRect(
-        0,
-        0,
-        GAME_CONFIG.symbol.width,
-        GAME_CONFIG.symbol.height,
-        15,
-      );
+      bg.roundRect(0, 0, GAME_CONFIG.symbol.width, GAME_CONFIG.symbol.height, 15);
       bg.fill({ color: 0xffffff });
       bg.tint = 0x2a2a36;
 
@@ -44,7 +38,7 @@ export class Reel extends Container {
       symbolContainer.addChild(bg);
       symbolContainer.addChild(text);
 
-      // Зберігаємо посилання на елементи, щоб змінювати їх пізніше 
+      // Зберігаємо посилання на елементи, щоб змінювати їх пізніше
       this.symbolBgs.push(bg);
       this.symbolTexts.push(text);
       this.addChild(symbolContainer);

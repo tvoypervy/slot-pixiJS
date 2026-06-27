@@ -1,4 +1,6 @@
-{
+import type { GameData } from "../core/SpinService";
+
+export const SPINS_DATA: GameData = {
   "gameConfig": {
     "rows": 3,
     "columns": 5,
@@ -64,4 +66,4 @@
       }
     }
   ]
-}
+};
