@@ -31,7 +31,7 @@
    npm install
    ```
 4. Запуск через:
-  ```bash
+   ```bash
    npm run dev
    ```
 
